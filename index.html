@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF"-8/>
+<title>Just Kimster site</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  grid-area: header;
+  background-color: aquamarine;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'left middle middle middle middle right' 
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: aqua;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px;
+}
+.left {
+  grid-area: left;
+}
+
+.middle {
+  grid-area: middle;
+}
+
+.right {
+  grid-area: right;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left left left left left' 
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+      'footer footer footer footer footer footer';
+}
+
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="header">
+    <h2>Welcome to my site!</h2>
+  </div>
+  
+  <div class="left" style="background-color: antiquewhite;">Column</div>
+  <div class="middle" style="background-color: antiquewhite;">Column</div>  
+  <div class="right" style="background-color: antiquewhite;">Column</div>
+  
+  <div class="footer">
+    <p>Kim Nguyen, 2021</p>
+  </div>
+</div>
+</body>
+</html>
+
